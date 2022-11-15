@@ -1,6 +1,8 @@
 import './Expenses.css'
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
+import ExpensesFilter from './ExpensesFilter';
+import ExpensesStatistic from './ExpensesStatistic';
 
 const Expenses = (props) => {
     const data = props.array;
@@ -9,7 +11,9 @@ const Expenses = (props) => {
     })
 
     return (
-        <Card className="expenses">          
+        <Card className="expenses">  
+            <ExpensesFilter/>
+            <ExpensesStatistic/>      
             {items}
         </Card>
     )
